@@ -53,9 +53,6 @@ public class WeatherServiceController {
 	@RequestMapping(value = "/", method = RequestMethod.POST)
 	public String checkInfo(Model model, WeatherDataDecorator weatherDisplay, BindingResult bindingResult) {
 		String name = weatherDisplay.getName();
-		if (name == null || name.isEmpty()) {
-			throw new CustomGenericException("Invalid Input", "Please enter a city");
-		}
 		log.info("Received a request for retreiving weather for : " + name);
 		RestTemplate restTemplate = new RestTemplate();
 		WeatherData weatherData = restTemplate.getForObject(BASE_URL + name + APPID, WeatherData.class);
