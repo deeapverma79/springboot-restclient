@@ -1,0 +1,40 @@
+<!-- Thymeleaf template which is used to input data to retrieve weather information from the server -->
+<html>
+    <body>
+        <form action="#" th:action="@{/}" th:object="${weatherDisplay}" method="post">
+            <table>
+                <tr>
+                    <td>City Name:</td>
+                    <td><input type="text" th:field="*{name}" /></td>
+                </tr>
+                <tr>
+                    <td>Today's Date :</td>
+                    <td th:text="*{date}">1</td>
+                </tr>
+                <tr>
+                    <td>Overall Weather:</td>
+                    <td th:text="*{description}">1</td>
+                </tr>
+ 				<tr>
+                    <td>Temperature in F:</td>
+                    <td th:text="*{tempInF}">1</td>
+                </tr>
+                <tr>
+                    <td>Temperature in C:</td>
+                    <td th:text="*{tempInC}">1</td>
+                </tr>
+				<tr>
+                    <td>Sunrise:</td>
+                    <td th:text="*{sunrise}">1</td>
+                </tr>
+                <tr>
+                    <td>Sunset:</td>
+                    <td th:text="*{sunset}">1</td>
+                </tr>
+                <tr>
+                    <td><button type="submit">Submit</button></td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>
