@@ -10,3 +10,9 @@ If the webservice resturns an error it would be displayed on the form.
 
 In case of an exception the user would be forwarded to a generic exception page.
 
+Following technologies have been used -
+1) SpringBoot
+2) Thymeleaf templates
+3) Maven
+4) Spring Test
+5) Jackson ObjectMapper
