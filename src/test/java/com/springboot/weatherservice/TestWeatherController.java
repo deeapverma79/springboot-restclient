@@ -17,5 +17,6 @@ public class TestWeatherController {
 	public void validateRetrieve() throws Exception {
 		mvc.perform(get("/")).andExpect(status().isOk())
 	     .andExpect(forwardedUrl("form"));
+	 
 	}
 }

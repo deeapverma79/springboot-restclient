@@ -1,6 +1,8 @@
 <!-- Thymeleaf template which is used to input data to retrieve weather information from the server -->
 <html>
     <body>
+   		<span style="color: red; font-size: 12pt" th:text="${error?.code}">Static summary</span>
+   		<span style="color: red; font-size: 12pt" th:text="${error?.message}">Static summary</span>
         <form action="#" th:action="@{/}" th:object="${weatherDisplay}" method="post">
             <table>
                 <tr>
